@@ -1,0 +1,425 @@
+:root {
+    --main-color: #DB5947;
+    --background: rgba(255, 255, 255, 0.7);
+    --background-from: #F5756330;
+    --button-color1: #F1C439; /* Yellow button color */
+    --input-opacity: 0.4; /* Adjust the opacity value as needed */
+}
+.dark-mode {
+    background-color: #000; 
+    color: #fff; 
+
+   
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('your-blurred-background-image.jpg'); /* Replace with your background image */
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    color: #251B13;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  margin: 0;
+  min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+}
+
+@media screen and (max-width: 768px) {
+    nav .menu-button {
+      display: block;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  
+    nav .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    /* ... (existing styles for mobile navigation) */
+}
+  
+
+nav {
+    background: var(--background); /* Semi-transparent white background for the blur effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow below the nav */
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixed position to stay at the top while scrolling */
+    /* Take up the full width of the viewport */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it appears above other content */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+nav a {
+    text-decoration: none;
+    color: #251B13; /* Text color for links */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px; /* Adjust spacing between list items */
+}
+
+nav button {
+    background: #FFECDD; /* Background color for the "Sign In" button */
+    border: 2px solid #DB5947;
+    padding: 5px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+nav button a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #DB5947; /* Text color for the button */
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+/* Center the navigation links */
+nav ul {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav img {
+    margin-left: 40px;
+}
+nav .menu-button {
+    display: none; /* Hide the burger menu button */
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-right: 20px;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    nav .menu-button {
+        display: block; /* Show the burger menu button */
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    nav .nav-links {
+        display: none; /* Hide the navigation links */
+        flex-direction: column;
+        background-color: #333; /* Background color for the mobile menu */
+        position: absolute;
+        top: 60px; /* Adjust this value as needed to position the menu below the navigation bar */
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    nav.open .nav-links {
+        display: flex; /* Show the navigation links when the menu is open */
+    }
+}
+/*background animation*/
+
+.raindrop,.raindrop-1,.raindrop-2,.raindrop-3, .raindrop-4{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0.3;
+    animation: fall 0.5s linear infinite, drift 10s linear infinite;
+    border-radius: 10%;
+}
+.raindrop {
+    background-color: var(--raindrop-color-bg); 
+}
+.raindrop-1 {
+    background-color: #da7295;
+    top: 600px;
+}
+.raindrop-2 {
+    background-color: #da9f72;
+    top: 700px;
+    right: 50px;
+}
+.raindrop-3 {
+    background-color: #da9f72;
+    top: 250px;
+    right:50px;
+}
+.raindrop-4 {
+    background-color: #eee678;
+    top: 300px;
+    left:100px;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(calc(90vh + 50px));
+    }
+}
+
+@keyframes drift {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    75% {
+        transform: translateX(20px);
+    }
+}
+
+section{
+    justify-content: center;
+}
+
+select, input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px var(--main-color);
+    border-radius: 10px;
+}
+
+
+input[type="text"]{
+    width: 100%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0px 10px 0px;
+    border: 1px;
+    border-color: var(--main-color);
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+    background-color: #251B13;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 120px;
+    justify-content: center;
+}
+
+footer section {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;
+}
+
+footer section h3 {
+    margin-top: 0;
+}
+
+footer section ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer section ul li {
+    margin: 10px 0;
+}
+
+footer p {
+    text-align: center;
+    clear: both;
+    margin: 20px 0;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.terms{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div a img{
+    width: 30px;
+    height: 30px;
+    margin: 10px 20px 10px 20px;
+}
+.contactLogo{
+    display: flex;
+}
+
+.miniHelp{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+
+/* switch slider */
+.checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    height: 25px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EDB508;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 26px;
+    left: 4px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--main-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 5px 5px 10px gray;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+    box-shadow: 5px 5px 10px gray;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Form css */
+.main{
+    display: flex;
+    width: 100%;
+}
+form{
+    display: block;
+    width: 30%;
+    background-color: var(--background-from);
+    padding: 20px 50px;
+    border-radius: 30px;
+}
+.info{
+    width: 60%;
+    padding-right: 20px;
+}
+.img{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 20px;
+    justify-content: space-between;
+}
+article{
+    display: flex;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--background);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}

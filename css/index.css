@@ -1,0 +1,590 @@
+:root{
+    --color-biege-1: #da9f72;
+    --color-biege-2: #da9f72;
+    --color-biege-3: #da9f72;
+    --color-biege-4: #da9f72;
+    --section-background: #ECA37E;
+    --raindrop-color-bg:var(--color-biege-1);
+    --raindrop-color-text:var(--color-black-1);
+    }
+    .dark-mode {
+        background-color: #000; 
+        color: #fff; 
+
+       
+    }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('your-blurred-background-image.jpg'); /* Replace with your background image */
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+    color: #251B13;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.miniih{
+    margin: 0;
+    padding: 15px;
+    background-color: #F1C439;
+    border: 0;
+    border-radius: 15px;
+    width: 200px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5px;
+}
+
+.more{
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 200px;
+    border: solid 2px #DB5947;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5px;
+}
+.more a{
+    color:#DB5947;
+    text-decoration: none;
+}
+main {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  margin: 0;
+  min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+}
+@media screen and (max-width: 768px) {
+    nav .menu-button {
+      display: block;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  
+    nav .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    /* ... (existing styles for mobile navigation) */
+}
+  
+
+nav {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for the blur effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow below the nav */
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixed position to stay at the top while scrolling */
+    /* Take up the full width of the viewport */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it appears above other content */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+nav a {
+    text-decoration: none;
+    color: #251B13; /* Text color for links */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px; /* Adjust spacing between list items */
+}
+
+nav button {
+    background: #FFECDD; /* Background color for the "Sign In" button */
+    border: 2px solid #DB5947;
+    padding: 5px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+nav button a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #DB5947; /* Text color for the button */
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Center the navigation links */
+nav ul {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav img {
+    margin-left: 40px;
+}
+
+
+body {
+    padding-top: 150px; 
+}
+
+.poster {
+    display: flex;
+    flex-flow: row wrap; /* Stack elements vertically */  
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+main div section h1 {
+    font-size: 50px;
+    width: 350px;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.duudlaga-button {
+  margin:  30px 0 30px 0;
+  background-color: #F1C439;
+  border: none;
+  border-radius: 20px;
+  width: 400px;
+  height: 80px;
+
+}
+
+.duudlaga-button a{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600; 
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.duudlaga-button i{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600; 
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+  }
+.tbuttons {
+    display: flex;
+   
+}
+.tbuttons button {
+    margin-inline: 7px;
+    background-color: #fff2f0;
+    border-color: #fa8575;
+    border-radius: 10px;
+    width: 120px;
+    height: 80px;
+   
+}
+
+/*3n icon*/
+
+.tbuttons button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #fa8575;
+    background: #FBF6F2;
+    cursor: pointer;
+    padding: 10px;
+    height: 110px;
+    overflow: hidden; 
+}
+
+.tbuttons .icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.tbuttons button a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #fa8575;
+    text-align: center;
+}
+
+
+
+/*searching section*/
+.searching {
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+
+    & h2 {
+        width: 1000px;
+        height: 50px;
+        align-items: center;
+        background-color: #FFF5D4;
+        color: #F1C439;
+        & a {
+            align-self: center;
+            width: 100%;
+            height: 100%;
+            color: #F1C439;
+        }
+    }
+}
+
+.searching section {
+    align-items: center;
+    display:inline-flex;
+}
+
+main .poster section .duudlaga-button img {
+    position: relative;
+    top: 6px;
+    width: 31px;
+    padding: 0;
+    margin: 0;
+}
+
+/*background animation*/
+
+.raindrop,.raindrop-1,.raindrop-2,.raindrop-3{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0.3;
+    animation: fall 0.5s linear infinite, drift 4s linear infinite;
+    border-radius: 10%;
+}
+.raindrop {
+    background-color: var(--raindrop-color-bg); 
+}
+.raindrop-1 {
+    background-color: #da7295;
+    top: 600px;
+}
+.raindrop-2 {
+    background-color: #da9f72;
+    top: 700px;
+    right: 50px;
+}
+.raindrop-3 {
+    background-color: #da9f72;
+    top: 250px;
+    right:50px;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(calc(90vh + 50px));
+    }
+}
+
+@keyframes drift {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    75% {
+        transform: translateX(20px);
+    }
+}
+
+section{
+    justify-content: center;
+}
+
+/* Styles for larger screens */
+.poster {
+    display: flex;
+    align-items: center;
+  }
+ 
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+
+  
+    .poster section {
+      text-align: center; /* Center-align text */
+    }
+  
+    .poster img {
+      order: 1; /* Move the image below the section */
+      max-width: 200%; /* Ensure the image stays within the container */
+    }
+  
+    h1 {
+      font-size: 20px; /* Adjust the font size as needed */
+    }
+    .duudlaga-button{
+        width: 350px;
+    }
+    .tbuttons{
+        width: 350px;
+    }
+
+  }
+
+
+  nav .menu-button {
+    display: none; /* Hide the burger menu button */
+  }
+  
+  nav .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav .nav-links li {
+    margin-right: 20px;
+  }
+
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+    nav .menu-button {
+      display: block; /* Show the burger menu button */
+      margin-left: auto;
+      cursor: pointer;
+    }
+  
+    nav .nav-links {
+      display: none; /* Hide the navigation links */
+      flex-direction: column;
+      background-color: #333; /* Background color for the mobile menu */
+      position: absolute;
+      top: 60px; /* Adjust this value as needed to position the menu below the navigation bar */
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    nav .nav-links li {
+      margin: 10px 0;
+    }
+  
+    nav.open .nav-links {
+      display: flex; /* Show the navigation links when the menu is open */
+    }
+  }
+  /* haij bn heseg*/
+   .slider-container {
+
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    & button{
+        border: none ;
+       
+
+    }
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    box-sizing: border-box;
+    border: solid 1px #c3bfbf;
+    border-radius: 15px;
+    padding: z;
+    margin: 15px;
+    width: 250px;
+
+    & p{
+        font-size: 18px;
+        padding: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 0;
+    }
+    
+}
+.slide img {
+    max-width: 100%;
+    margin-top: 5px;
+    height: auto;
+}
+button {
+    margin-top: 10px;
+}
+.call-icon{
+    width: 50px;
+    border: none;
+}
+
+
+/* footer */
+footer {
+    background-color: #251B13;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 120px;
+    justify-content: center;
+}
+
+footer section {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;
+}
+
+footer section h3 {
+    margin-top: 0;
+}
+
+footer section ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer section ul li {
+    margin: 10px 0;
+}
+
+footer p {
+    text-align: center;
+    clear: both;
+    margin: 20px 0;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.terms{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div a img{
+    width: 30px;
+    height: 30px;
+    margin: 10px 20px 10px 20px;
+}
+.contactLogo{
+    display: flex;
+}
+
+.miniHelp{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+/* Style the user comment section */
+.user-comment {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 50px;
+    background-color: var(--section-background);
+    justify-content: center;
+   
+}
+
+.user-comment article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+  
+
+}
+
+.user-comment button{
+    background-color: transparent;
+    border: none;
+    margin-bottom: -70px;
+    z-index: 1;
+}
+
+.comment{
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    padding-top: 55px;
+    z-index: 0;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.user-comment article img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid white;
+    z-index: 1;
+}
+
+.user-comment article p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+

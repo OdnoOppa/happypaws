@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <link rel="stylesheet" href="../js/render.js">
+    <meta charset="UTF-8">
+    <meta name="theme-color">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappiPawz - Жаргалтай нөхөр</title>
+    <meta name="description" content="Pet, гэрийн тэжээвэр амьтан, found pet, report pet, adopt pet">
+    <link rel="stylesheet" href="../css/render.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+    
+    <div class="raindrop"></div>
+    <div class="raindrop-1"></div>
+    <div class="raindrop-2"></div>
+    <div class="raindrop-3"></div>
+    <div class="raindrop-4"></div>
+    <script src="../js/render.js"></script>
+    <nav>
+        <a href="index.html"> <img src="../assets/logo.png" alt="Logo"></a>
+        <button class="menu-button">&#9776;</button> <!-- Burger menu button -->
+        <ul class="nav-links">
+            <li><a href="rating.html">Үнэлэх, санал өгөх</a></li>
+            <li><a href="ad-zar.html">Зар оруулах</a></li>
+            <li><a class="darkmode">Нүдэнд ээлтэй</a></li>
+        </ul>
+ 
+        <button class="signin-button"><a href="sign-in.html">Нэвтрэх</a></button>
+        
+    </nav>
+
+    <main>
+       <!-- 
+        <aside>  
+            <form id="petSortingForm">
+                <label for="animal">Төрөл:</label>
+                <select id="animal" name="animal">
+                    <option value="cat">cat</option>
+                    <option value="dog">dog</option>
+                </select>
+                <br>
+                <animal-sorter></animal-sorter>
+                <button type="button" onclick="sortPets()">Sort</button>
+
+
+            </form>
+           
+                <label for="sex">Хүйс:</label>
+                <select id="sex" name="sex">
+                    <option value="эр">Эр</option>
+                    <option value="эм">Эм</option>
+                </select><br>
+                <label for="location">Байршил:</label>
+                <select id="location" name="location">
+                    <option value="Хан-Уул">Хан-Уул</option>
+                    <option value="Баянгол">Баянгол</option>
+                    <option value="Сонгино хайрхан">Сонгино хайрхан</option>
+                </select>
+                <br>
+                <label for="sortDate">Он, сар, өдөр:</label>
+                <input type="date" id="sortDate" name="sortDate">
+                <br>
+                <select id="status" name="status">
+                    <option value="үрчлэх">Үрчлэх</option>
+                    <option value="авах">Олсон</option>
+                </select><br> 
+            
+        </aside> -->
+        <h3>НАМАЙГ АВААРАЙ</h3>
+        <div class="slider-container">
+            <hp-list ttl="get-pet"></hp-list>
+            <div class="slider" id="pet-slider">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="miniHelp">
+            <section>
+                <h3>HappiPawz гэж юу вэ?</h3>
+                <ul>
+                    <li><a href="#about.html">Тухай</a></li>
+                    <li><a href="#faq.html">Түгээмэл асуултууд</a></li>
+                    <li><a href="#help.html">Туслах</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Харилцагч байгууллагууд</h3>
+                <ul>
+                    <li><a href="#">Дэмжигч</a></li>
+                    <li><a href="#">Асрах үйлчилгээ</a></li>
+                    <li><a href="#">Амьтны хэрэгслийн дэлгүүр</a></li>
+                    <li><a href="#">Эмнэлэг</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Бидэнтэй холбогдох</h3>
+                <address>Хаяг: doloremque laudantium, to</address>
+                <p>Холбоо барих: 9999-9999</p>
+            </section>
+        </div>
+        <div class="contactLogo">
+            <a href="facebook.com"><img src="../assets/fb.png" alt="Logo"></a>
+            <a href="youtube.com"><img src="../assets/yt.png" alt="Logo"></a>
+            <a href="instagram.com"><img src="../assets/ig.png" alt="Logo"></a>
+        </div>
+        <div class="terms">
+            <p>Use of this service, website, or application constitutes acceptance of all terms listed above. © 2023, HappiPawz Inc. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+    <script src="../js/render.js"></script>
+    <script src="../js/darkmode.js"></script>
+
+</body>
+
+</html>

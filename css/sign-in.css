@@ -1,0 +1,88 @@
+/* styles-signup.css */
+:root {
+    --main-color: #fa8575;
+    --button-color: #F1C439;
+    --input-opacity: 0.4;
+}
+
+* {
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+    color: #251B13;
+}
+
+section {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+section img {
+    position: relative;
+    top: -35%;
+    left: 15%;
+    width: 80px;
+    height: 65px;
+}
+
+section form {
+    background-color: #fff;
+    border: 5px solid var(--main-color);
+    padding: 20px;
+    text-align: start;
+    border-radius: 15px;
+}
+
+section form h4 {
+    color: var(--main-color);
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+section form input[type="text"],
+section form input[type="email"],
+section form input[type="Нэр"],
+section form input[type="text"],
+section form input[type="password"],
+section form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(241, 196, 57, var(--input-opacity));
+    display: block; /* Make inputs display as block elements */
+}
+
+section form a {
+    position: relative;
+    color: black;
+    text-decoration: underline;
+    margin: 10px 0;
+    font-size: 14px;
+
+  
+}
+
+/* Set button background color to yellow and make text bold */
+section form button {
+    width: 200px;
+    position: relative;
+   
+    background-color: var(--button-color);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold; /* Make button text bold */
+}
+
+section form button a {
+    text-decoration: none;
+    color: black;
+}
