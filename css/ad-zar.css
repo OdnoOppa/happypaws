@@ -2,8 +2,8 @@
     --main-color: #DB5947;
     --background: rgba(255, 255, 255, 0.7);
     --background-from: #F5756330;
-    --button-color1: #F1C439; /* Yellow button color */
-    --input-opacity: 0.4; /* Adjust the opacity value as needed */
+    --button-color1: #F1C439; 
+    --input-opacity: 0.4; 
 }
 .dark-mode {
     background-color: #000; 
@@ -14,7 +14,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('your-blurred-background-image.jpg'); /* Replace with your background image */
+    background-image: url('your-blurred-background-image.jpg'); 
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     color: #251B13;
@@ -25,11 +25,11 @@ body {
 
 main {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
   margin: 0;
-  min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+  min-height: 100vh; 
 }
 
 @media screen and (max-width: 768px) {
@@ -50,30 +50,30 @@ main {
       padding: 10px;
     }
   
-    /* ... (existing styles for mobile navigation) */
+   
 }
   
 
 nav {
-    background: var(--background); /* Semi-transparent white background for the blur effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow below the nav */
+    background: var(--background); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Fixed position to stay at the top while scrolling */
-    /* Take up the full width of the viewport */
-    top: 0; /* Stick to the top */
+    position: fixed; 
+    
+    top: 0; 
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
 
 nav a {
     text-decoration: none;
-    color: #251B13; /* Text color for links */
+    color: #251B13; 
 }
 
 nav ul {
@@ -84,11 +84,11 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 20px; /* Adjust spacing between list items */
+    margin-right: 20px; 
 }
 
 nav button {
-    background: #FFECDD; /* Background color for the "Sign In" button */
+    background: #FFECDD; 
     border: 2px solid #DB5947;
     padding: 5px 25px;
     border-radius: 15px;
@@ -101,14 +101,14 @@ nav button {
 nav button a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    color: #DB5947; /* Text color for the button */
+    color: #DB5947; 
     font-weight: 600;
     font-size: 16px;
     white-space: nowrap; 
     overflow: hidden;
 }
 
-/* Center the navigation links */
+
 nav ul {
     flex: 1;
     display: flex;
@@ -123,7 +123,7 @@ nav img {
     margin-left: 40px;
 }
 nav .menu-button {
-    display: none; /* Hide the burger menu button */
+    display: none; 
 }
 
 nav .nav-links {
@@ -135,20 +135,20 @@ nav .nav-links li {
     margin-right: 20px;
 }
 
-/* Media query for mobile screens */
+
 @media screen and (max-width: 768px) {
     nav .menu-button {
-        display: block; /* Show the burger menu button */
+        display: block; 
         margin-left: auto;
         cursor: pointer;
     }
 
     nav .nav-links {
-        display: none; /* Hide the navigation links */
+        display: none; 
         flex-direction: column;
-        background-color: #333; /* Background color for the mobile menu */
+        background-color: #333; 
         position: absolute;
-        top: 60px; /* Adjust this value as needed to position the menu below the navigation bar */
+        top: 60px; 
         left: 0;
         width: 100%;
         padding: 10px;
@@ -159,7 +159,7 @@ nav .nav-links li {
     }
 
     nav.open .nav-links {
-        display: flex; /* Show the navigation links when the menu is open */
+        display: flex; 
     }
 }
 /*background animation*/
@@ -248,6 +248,7 @@ button {
     width: 100%;
     cursor: pointer;
 }
+
 
 /* Style the footer */
 footer {
