@@ -8,7 +8,7 @@ $db = "form";
 $con = pg_connect("host=$host dbname=$db user=$user password=$pass") or die ("Unable to connect to PostgreSQL server");
 
 if(!$con){
-    echo "error: no data\n";
+    echo "error: no data\n";    
 } else{
 
     $gender = $_POST['gender'];
@@ -51,7 +51,7 @@ if(!$con){
  }
 
 
-echo '<br><button><a href="index.html">Буцах</a></button>';
+echo '<br><button><a href="ad-zar.html">Буцах</a></button>';
 
 pg_close($con);
 

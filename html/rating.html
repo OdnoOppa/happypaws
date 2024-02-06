@@ -38,6 +38,105 @@
         
         <button class="signin-button"><a href="sign-in.html">Нэвтрэх</a></button>
     </nav>
+<!-- rating.html -->
+<form id="reviewForm" action="submit_review.php" method="post">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+    
+    <label for="star_number">Star Rating:</label><br>
+    <div class="stars" id="starRating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+    </div><br><br>
+    
+    <input type="hidden" id="selectedStar" name="star_number" value="0"> <!-- Hidden field to store selected star value -->
+    
+    <label for="comment">Comment:</label><br>
+    <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+    
+    <input type="submit" value="Submit Review">
+</form>
+<!-- Add this button to your HTML form or page -->
+<button id="filterButton">Filter by Stars</button>
+
+<!-- Display section for reviews -->
+<div id="reviewsContainer"></div>
+
+
+<!-- Display section for reviews -->
+<div id="reviewsContainer"></div>
+
+<script>
+    // JavaScript to handle filter button click
+document.getElementById('filterButton').addEventListener('click', function() {
+    // Fetch reviews with sorting parameter
+    fetchReviews('sort_by_stars');
+});
+
+// Function to fetch reviews with optional sorting parameter
+function fetchReviews(sortBy = '') {
+    let url = 'fetch_reviews.php';
+    
+    // Append sorting parameter if provided
+    if (sortBy !== '') {
+        url += '?sort=' + sortBy;
+    }
+
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('reviewsContainer').innerHTML = data;
+        })
+        .catch(error => console.error('Error fetching reviews:', error));
+}
+    // JavaScript to handle star rating selection
+    const stars = document.querySelectorAll('.star');
+    const starRating = document.getElementById('starRating');
+    const selectedStar = document.getElementById('selectedStar');
+
+    stars.forEach(star => {
+        star.addEventListener('mouseover', () => {
+            highlightStars(star.dataset.value);
+        });
+
+        star.addEventListener('click', () => {
+            selectedStar.value = star.dataset.value;
+            highlightStars(star.dataset.value);
+        });
+
+        star.addEventListener('mouseout', () => {
+            const rating = selectedStar.value;
+            highlightStars(rating);
+        });
+    });
+
+    function highlightStars(value) {
+        stars.forEach(star => {
+            if (star.dataset.value <= value) {
+                star.style.color = 'gold';
+            } else {
+                star.style.color = 'black';
+            }
+        });
+    }
+
+    // Fetch and display reviews on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchReviews();
+    });
+
+    function fetchReviews() {
+        fetch('fetch_reviews.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('reviewsContainer').innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching reviews:', error));
+    }
+</script>
 
 
     <footer>
