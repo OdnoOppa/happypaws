@@ -31,19 +31,29 @@ if(!$con){
  $retrieve_result = pg_query($con, $retrieve_query);
  if ($retrieve_result) {
 
-     echo "<h2>Бүртгэл</h2>";
-     echo "<table>";
-     echo "<tr><th>ID</th><th>Хүйс</th><th>Төрөл</th><th>Байршил</th><th>Өнгө</th></tr>";
-     while ($row = pg_fetch_assoc($retrieve_result)) {
-         echo "<tr>";
-         echo "<td>" . $row['id'] . "</td>";
-         echo "<td>" . $row['gender'] . "</td>";
-         echo "<td>" . $row['type'] . "</td>";
-         echo "<td>" . $row['location'] . "</td>";
-         echo "<td>" . $row['color'] . "</td>";
-         echo "</tr>";
-     }
-     echo "</table>";
+    echo "<h2>Бүртгэл</h2>";
+    echo "<div class='reviews-container'>"; 
+    while ($row = pg_fetch_assoc($retrieve_result)) {
+        echo "<div class='row-box'>";
+        echo "<div class='box'>";
+        echo "<p>ID: " . $row['id'] . "</p>";
+        echo "</div>";
+        echo "<div class='box'>";
+        echo "<p>Хүйс: " . $row['gender'] . "</p>";
+        echo "</div>";
+        echo "<div class='box'>";
+        echo "<p>Төрөл: " . $row['type'] . "</p>";
+        echo "</div>";
+        echo "<div class='box'>";
+        echo "<p>Байршил: " . $row['location'] . "</p>";
+        echo "</div>";
+        echo "<div class='box'>";
+        echo "<p>Өнгө: " . $row['color'] . "</p>";
+        echo "</div>";
+        echo "</div>"; 
+    }
+    echo "</div>"; 
+    
  } 
 
  else {

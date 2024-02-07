@@ -35,7 +35,7 @@ if (!$con) {
         echo "<div class='overview'>";
         echo "<h2>Overview</h2>";
         echo "<p><strong>Overall Star Rating:</strong> $overallStarRating</p>";
-        echo "<p><strong>Total Comments:</strong> $totalComments</p>";
+        echo "<p><strong>Total Comments:</strong> $totalComments</p><br>";
         echo "</div>";
 
         // ur dungiin eheleliig reset hiih
@@ -55,7 +55,7 @@ if (!$con) {
             }
             
             $html .= "</div>";
-            $html .= "<div><strong>Comment:</strong> " . $row['comment'] . "</div>";
+            $html .= "<div><strong>Comment:</strong> " . $row['comment'] . "</div><br>";
             $html .= "</div>";
 
             // html ee output hiih

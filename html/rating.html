@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puppy - Жаргалтай нөхөр</title>
     <meta name="description" content="Pet, гэрийн тэжээвэр амьтан, found pet, report pet, adopt pet">
-    <link rel="stylesheet" href="../css/index.css">
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,18 +18,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        rel="stylesheet">'
+    <link rel="stylesheet" href="../css/rating.css">
 
 
 </head>
 
 <body>
 
-
+<main>
     <nav>
         <a href="index.html"> <img src="../assets/logo.png" alt="Logo"></a>
-        <button class="menu-button">&#9776;</button> <!-- Burger menu button -->
+      
         <ul class="nav-links">
             <li><a href="rating.html">Үнэлэх, санал өгөх</a></li>
             <li><a href="ad-zar.html">Зар оруулах</a></li>
@@ -38,26 +38,31 @@
         
         <button class="signin-button"><a href="sign-in.html">Нэвтрэх</a></button>
     </nav>
+    <section class="container">
+
+   <h1>Үнэлэх, санал өгөх хэсэг</h1>
+   <p>Та доорх формыг бөглөн саналаа өгөөрэй</p>
 <form id="reviewForm" action="submit_review.php" method="post">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" required><br><br>
-    
-    <label for="star_number">Star Rating:</label><br>
     <div class="stars" id="starRating">
         <span class="star" data-value="1">&#9733;</span>
         <span class="star" data-value="2">&#9733;</span>
         <span class="star" data-value="3">&#9733;</span>
         <span class="star" data-value="4">&#9733;</span>
         <span class="star" data-value="5">&#9733;</span>
-    </div><br><br>
+    </div>
     
-    <input type="hidden" id="selectedStar" name="star_number" value="0"> <!-- Hidden field to store selected star value -->
+    <input type="hidden" id="selectedStar" name="star_number" value="0">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required placeholder="Хэрэглэгчийн нэрээ оруулна уу...">
     
+  
+
+    <br><br>
     <label for="comment">Comment:</label><br>
-    <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
-    
-    <input type="submit" value="Submit Review">
-</form>
+    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Та сэтгэгдлээ үлдээнэ үү..."></textarea><br>
+    <br>
+    <input type="submit" value="Submit Review" >
+</form><br>
 <button id="filterButton">Filter by Stars</button>
 <div id="reviewsContainer"></div>
 
@@ -131,7 +136,8 @@ function fetchReviews(sortBy = '') {
             .catch(error => console.error('Error fetching reviews:', error));
     }
 </script>
-
+</section>
+</main>
 
     <footer>
         <div class="miniHelp">

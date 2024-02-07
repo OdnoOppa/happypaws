@@ -1,8 +1,8 @@
-/* styles-signin.css */
+
 :root {
     --main-color: #fa8575;
-    --button-color: #F1C439; /* Yellow button color */
-    --input-opacity: 0.4; /* Adjust the opacity value as needed */
+    --button-color: #F1C439; 
+    --input-opacity: 0.4; 
 }
 
 * {
@@ -63,7 +63,6 @@
     left: 110px;
 }
 
-/* Set button background color to yellow and make text bold */
 .sub {
     width: 200px;
     position: relative;

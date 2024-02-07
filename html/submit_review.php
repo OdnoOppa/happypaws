@@ -1,4 +1,5 @@
 <?php
+//submit_review.php
 $host = "localhost";
 $user = "postgres";
 $pass = "9021";
@@ -19,28 +20,16 @@ if (!$con) {
     $result = pg_query($con, $query);
 
     if ($result) {
-        echo "<h1>Review submitted successfully!</h1>";
+        
+     
+        echo "<div style='display: flex; justify-content: center; align-items: center; height: 100vh;'>";
+        echo "<div style='text-align: center; font-family: \"Nunito\", sans-serif;'>";
+        echo "<h1>Сэтгэгдлээ үлдээсэнд баярлалаа!</h1>";
+        echo "<button style='font-family: \"Nunito\", sans-serif; padding: 10px 20px; background-color: #F1C439; color: white; border: none; border-radius: 8px; cursor: pointer;' onclick=\"window.location.href='rating.html';\">Буцах</button>";
+        echo "</div>";
+        echo "</div>";
 
-        // Doh review haruulah
-        $retrieve_query = "SELECT * FROM review ORDER BY id DESC";
-        $retrieve_result = pg_query($con, $retrieve_query);
-
-        if ($retrieve_result) {
-            echo "<h2>Reviews</h2>";
-            echo "<table>";
-            echo "<tr><th>ID</th><th>Username</th><th>Star Rating</th><th>Comment</th></tr>";
-            while ($row = pg_fetch_assoc($retrieve_result)) {
-                echo "<tr>";
-                echo "<td>" . $row['id'] . "</td>";
-                echo "<td>" . $row['username'] . "</td>";
-                echo "<td>" . $row['star_number'] . "</td>";
-                echo "<td>" . $row['comment'] . "</td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-        } else {
-            echo "Error fetching data: " . pg_last_error($con) . "<br>";
-        }
+      
     } else {
         echo "Error submitting review: " . pg_last_error($con);
     }
