@@ -1,6 +1,4 @@
-//render.js
 document.addEventListener("DOMContentLoaded", function() {
-    // Animal data JSON
     const animalData = [
         { type: "муур", sex: "Эр", status: "авах", date: "2023.11.05", image: "../assets/pet-pic/muur1.png", location: "Хан-Уул" },
         { type: "нохой", sex: "Эр", status: "авах", date: "2023.11.10", image: "../assets/pet-pic/nohoi2.png", location: "Баянгол" },
@@ -13,8 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
         { type: "муур", sex: "Эм", status: "үрчлэх", date: "2023.11.01", image: "../assets/pet-pic/muur7.png", location: "Сүхбаатар" },
         
     ];
-    
-  // html dynamic generation
+
+
+  // html dynamic 
     function generatePetHTML(animal) {
         return `
             <div class="slide">
@@ -28,11 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
+
     function populateSlider() {
         const petSlider = document.getElementById("pet-slider");
         petSlider.innerHTML = '';
 
-        // Iterate through the animal data
+   
         for (let i = 0; i < animalData.length; i += 3) {
             const currentRow = document.createElement('div');
             currentRow.classList.add('row');
@@ -47,6 +47,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    populateSlider();
-    window.sortPets = sortPets;
+
 });

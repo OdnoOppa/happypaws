@@ -9,15 +9,17 @@ $con = pg_connect("host=$host dbname=$db user=$user password=$pass") or die("Una
 if (!$con) {
     echo "Error: Unable to connect to database.";
 } else {
-    if (isset($_GET['sort']) && $_GET['sort'] === 'sort_by_stars') {
-        // star buurah daraallaar
-        $query = "SELECT * FROM review ORDER BY star_number DESC";
-    } else {
-        // sortguigeer haruulah
-        $query = "SELECT * FROM review";
-    }
-    // fetch database display hiih
+    // Check if sorting parameter is set
+    $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
+
+    // Fetch database display hiih
+if ($sort === 'star') {
+    $query = "SELECT * FROM review ORDER BY star_number DESC";
+} else {
     $query = "SELECT * FROM review";
+}
+
+
     $result = pg_query($con, $query);
 
     if ($result) {

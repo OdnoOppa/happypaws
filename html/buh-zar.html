@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Data</title>
+<link rel="stylesheet" href="../css/buh-zar.css">
+</head>
+<body>
+    <h1>Бусад бүх зарууд </h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <div id="submittedData">
+        <!-- datanuud haragdah heseg -->
+    </div>
+
+    <script>
+        var submittedData = []; // burtgegdsn datag hadgalah array
+
+        // Ajax ashiglaj datag fetch hiih
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'get_data.php', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                submittedData = JSON.parse(xhr.responseText);
+                displayData(submittedData);
+            }
+        };
+        xhr.send();
+
+        // page dr datag haruulah function heseg
+        function displayData(data) {
+            var submittedDataDiv = document.getElementById('submittedData');
+            var html = '<ul>';
+            data.forEach(function(row) {
+                html += '<li>';
+                html += 'Gender: ' + row.gender + ', ';
+                html += 'Type: ' + row.type + ', ';
+                html += 'Location: ' + row.location + ', ';
+                html += 'Color: ' + row.color;
+                html += '</li>';
+            });
+            html += '</ul>';
+            submittedDataDiv.innerHTML = html;
+        }
+
+        // search-d oruulsn utgaas hamaarch shuuh heseg
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var searchQuery = this.value.toLowerCase();
+            var filteredData = submittedData.filter(function(row) {
+                return row.gender.toLowerCase().includes(searchQuery) ||
+                       row.type.toLowerCase().includes(searchQuery) ||
+                       row.location.toLowerCase().includes(searchQuery) ||
+                       row.color.toLowerCase().includes(searchQuery);
+            });
+            displayData(filteredData);
+        });
+    </script>
+</body>
+</html>

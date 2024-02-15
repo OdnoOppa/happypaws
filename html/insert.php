@@ -20,18 +20,23 @@ if(!$con){
     $result = pg_query($con, $query);
     
     if ($result) {
-        echo "<h1> Амжилттай бүртгэгдлээ!</h1>";
+        echo "<div style='display: flex; justify-content: center; align-items: center; height: 100vh;'>";
+        echo "<div style='text-align: center; font-family: \"Nunito\", sans-serif;'>";
+        echo "<h1>Амжилттай бүртгэгдлээ!</h1>";
+        echo "<button style='font-family: \"Nunito\", sans-serif; padding: 10px 20px; background-color: #F1C439; color: white; border: none; border-radius: 8px; cursor: pointer;' onclick=\"window.location.href='buh-zar.html';\">Бусад зарууд үзэх</button>";
+        echo "</div>";
+        echo "</div>";
         
     } else {
         echo "Бүртгэхэд алдаа гарлаа " . pg_last_error($con);
     }
 }
- // List dursleh
+ /* List dursleh
  $retrieve_query = "SELECT * FROM form ORDER BY id DESC"; 
  $retrieve_result = pg_query($con, $retrieve_query);
  if ($retrieve_result) {
 
-    echo "<h2>Бүртгэл</h2>";
+   
     echo "<div class='reviews-container'>"; 
     while ($row = pg_fetch_assoc($retrieve_result)) {
         echo "<div class='row-box'>";
@@ -62,7 +67,7 @@ if(!$con){
 
 
 echo '<br><button><a href="ad-zar.html">Буцах</a></button>';
-
+*/
 pg_close($con);
 
 ?>
