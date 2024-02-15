@@ -36,7 +36,7 @@ if ($sort === 'star') {
      
         echo "<div class='overview'>";
         echo "<h2>Үнэлгээ</h2>";
-        echo "<p><strong>Overall Ерөнхий од:</strong> $overallStarRating</p>";
+        echo "<p><strong> Ерөнхий од:</strong> $overallStarRating</p>";
         echo "<p><strong>Нийт коммент:</strong> $totalComments</p><br>";
         echo "</div>";
 

@@ -4,7 +4,7 @@ const app = express();
 
 // API endpoint iinhpp route
 app.get('/api/data', (req, res) => {
-  //amitnii data 
+    //amitnii data 
     const data = [
         { type: "муур", sex: "Эр", status: "авах", date: "2023.11.05", image: "../assets/pet-pic/muur1.png", location: "Хан-Уул" },
         { type: "нохой", sex: "Эр", status: "авах", date: "2023.11.10", image: "../assets/pet-pic/nohoi2.png", location: "Баянгол" },
@@ -15,7 +15,7 @@ app.get('/api/data', (req, res) => {
         { type: "муур", sex: "Эр", status: "үрчлэх", date: "2023.12.01", image: "../assets/pet-pic/muur5.png", location: "Налайх" },
         { type: "нохой", sex: "Эр", status: "авах", date: "2023.11.05", image: "../assets/pet-pic/nohoi2.png", location: "Чингэлтэй" },
         { type: "муур", sex: "Эм", status: "үрчлэх", date: "2023.11.01", image: "../assets/pet-pic/muur7.png", location: "Сүхбаатар" },
-        
+
     ];
 
 
