@@ -14,8 +14,10 @@ if (!$con) {
     $username = pg_escape_string($_POST['username']);
     $star_number = intval($_POST['star_number']);
     $comment = pg_escape_string($_POST['comment']);
+    // pg_escape_string функцийг ашиглан username comment-н утгыг авч тусгай тэмдэгтүүдээс ялгана
+    // intval ашиглан star_number -ийг бүхэл тоон утга болгож авсан
 
-    // database ruu oruulah
+    // Өгөгдлийн сан руу дээр авсан утгуудаа insert хийнэ.
     $query = "INSERT INTO review (username, star_number, comment) VALUES ('$username', $star_number, '$comment')";
     $result = pg_query($con, $query);
 
@@ -29,9 +31,11 @@ if (!$con) {
         echo "</div>";
         echo "</div>";
 
+        // Хэрэв insert үйлдэл амжилттай болвол амжилттай гэсэн мессеж харуулна.
       
     } else {
         echo "Error submitting review: " . pg_last_error($con);
+        // Хэрэв амжилтгүй болвол алдааны мессеж харуулна
     }
 }
 
