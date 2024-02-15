@@ -9,7 +9,7 @@ $con = pg_connect("host=$host dbname=$db user=$user password=$pass") or die("Una
 if (!$con) {
     echo "Error: Unable to connect to database.";
 } else {
-    // Check if sorting parameter is set
+    // sorting parametr set hiigdsn eseh
     $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
 
     // Fetch database display hiih
@@ -35,9 +35,9 @@ if ($sort === 'star') {
 
      
         echo "<div class='overview'>";
-        echo "<h2>Overview</h2>";
-        echo "<p><strong>Overall Star Rating:</strong> $overallStarRating</p>";
-        echo "<p><strong>Total Comments:</strong> $totalComments</p><br>";
+        echo "<h2>Үнэлгээ</h2>";
+        echo "<p><strong>Overall Ерөнхий од:</strong> $overallStarRating</p>";
+        echo "<p><strong>Нийт коммент:</strong> $totalComments</p><br>";
         echo "</div>";
 
         // ur dungiin eheleliig reset hiih
@@ -48,8 +48,8 @@ if ($sort === 'star') {
         while ($row = pg_fetch_assoc($result)) {
   
             $html = "<div class='review'>";
-            $html .= "<div><strong>Username:</strong> " . $row['username'] . "</div>";
-            $html .= "<div><strong>Stars:</strong> ";
+            $html .= "<div><strong>Хэрэглэгчийн нэр:</strong> " . $row['username'] . "</div>";
+            $html .= "<div><strong>Од:</strong> ";
             
             // star shar ungutei gargaj ireh
             for ($i = 0; $i < $row['star_number']; $i++) {
@@ -57,7 +57,7 @@ if ($sort === 'star') {
             }
             
             $html .= "</div>";
-            $html .= "<div><strong>Comment:</strong> " . $row['comment'] . "</div><br>";
+            $html .= "<div><strong>Сэтгэгдэл:</strong> " . $row['comment'] . "</div><br>";
             $html .= "</div>";
 
             // html ee output hiih
